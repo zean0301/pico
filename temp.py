@@ -28,7 +28,6 @@ while True:
     temper_volts = temper_sensor.read_u16() * to_volts  #取得當時溫度的電壓
    
     celsius_degrees = 27 - (temper_volts - 0.706) / 0.001721    #計算攝氏溫度
-#   fahrenheit_degrees = celsius_degrees * 9 / 5 + 32           #計算華氏溫度
 
     lcd.move_to(0,1)      #游標跳至第二列第一行
     lcd.putstr('TEMP:')    
